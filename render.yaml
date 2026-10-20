@@ -1,0 +1,20 @@
+services:
+  - type: worker
+    name: exitant-turtle-hantoo
+    runtime: image
+    plan: starter
+    region: oregon
+    numInstances: 1
+    image:
+      url: docker.io/exitant/exitant-turtle-hantoo:latest
+    envVars:
+      - key: HANTOO_APP_KEY
+        sync: false
+      - key: HANTOO_APP_SECRET
+        sync: false
+      - key: HANTOO_ACCOUNT_NO
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
